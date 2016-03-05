@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html>
+  	<head>
+      <link rel="stylesheet" href="stylesheets/styles.css" />
+      <link rel='stylesheet' href='stylesheets/bootstrap.css'/>
+      <script src='javascript/script.js' type='text/javascript'></script>
+  	</head>
+  	<!-- this is where the two divs are divided vertically -->
+  	<body>
+  	<!-- this is the header -->
+  	  <div>
+  	  	<h1 id='headerStyle'class='text-center'> Come Play this FUN game!!!</h1>
+  	  </div>
+  <!-- main contents of the page -->
+      <div class='main'>
+        <div>
+        	<div class='col-md-4 borderRight'>
+        		<h2 id='history' class='text-center'>History</h2>
+        		<!-- call logging when you want something to log here -->
+        		  <ul id='logging'>
+        		  	<li>first</li>
+        		  	<li>second</li>
+        		  	<li>third</li>
+        		  </ul>
+        	</div>
+        </div>
+        <div>
+          <div class='col-md-8'>
+            <h2 id='ball' class='text-center'>The "Magic" Ball</h2>
+        	  <div id='sha'>
+                <div id='blackCircle'>
+                <span></span>
+                  <div id='whiteCircle' class='center-test'>
+                  <!-- use id=question getElementBy  -->
+                	  	<input id='question' type="text" class='text-control text-center' placeholder="Ask anything!">
+                	  	<br>
+                	  	<br>
+                	  	<!-- create the function using submit() -->
+                	    <button id='magicAnswer'>Wait for it</button>
+                	    <br>
+                	    <br>
+                	    <br>
+                	    <script src='javascript/script.js' type='text/javascript'></script>
+                	    <!-- use to show answer -->
+                	    <p id='showTheMagic' type='text'></p>
+                	</div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      </div>  
+  	</body>
+  </html>
+
