@@ -52,3 +52,32 @@ document.getElementById('magicAnswer').onclick = function () {
 	document.getElementById('showTheMagic').innerHTML = answer;
 };
 
+var Question = function(question) {
+  this.question = question;
+}
+
+Question.prototype.addToList = function() {
+  var list =   document.getElementById("logging");
+  var li = document.createElement('li');
+  li.innerHTML = this.question;
+  list.appendChild(li);  
+}
+
+Question.prototype.logQuestion = function() {
+  console.log(this.question + " created");
+}
+
+document.getElementById('question').onclick = function() {
+  var input1 = document.getElementById('question');
+  var newQuestion = new Question(input1.value);
+  newQuestion.addToList();
+  newQuestion.logQuestion();
+  input1.value = null;
+}
+
+
+
+
+
+
+
