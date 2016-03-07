@@ -50,14 +50,21 @@ var answers = [
 document.getElementById('magicAnswer').onclick = function () {
 	var answer = answers[Math.floor(Math.random() * answers.length) ];
 	document.getElementById('showTheMagic').innerHTML = answer;
+	//log, but changes everytime...
+	//document.getElementById('logging').innerHTML = answer;
+	var input1 = document.getElementById('the_question').value;
+    var newQuestion = new Question(input1.value);
+    newQuestion.addToList();
+    newQuestion.logQuestion();
+    input1.value = null;
 };
 
 var Question = function(question) {
-  this.question = question;
+  this.question = document.getElementById('the_question').value;
 }
 
 Question.prototype.addToList = function() {
-  var list =   document.getElementById("logging");
+  var list = document.getElementById("logging");
   var li = document.createElement('li');
   li.innerHTML = this.question;
   list.appendChild(li);  
@@ -67,13 +74,11 @@ Question.prototype.logQuestion = function() {
   console.log(this.question + " created");
 }
 
-document.getElementById('question').onclick = function() {
-  var input1 = document.getElementById('question');
-  var newQuestion = new Question(input1.value);
-  newQuestion.addToList();
-  newQuestion.logQuestion();
-  input1.value = null;
+var Answer = function(answers) {
+	this.answer = document.getElementById('showMagic').value;
 }
+console.log(this.answer);
+
 
 
 
